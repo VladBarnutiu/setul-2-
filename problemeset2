@@ -1,0 +1,118 @@
+
+EX 1  
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+       
+        Console.Write("Introduceti numarul de elemente (n): ");
+        int n = int.Parse(Console.ReadLine());
+
+        int count = 0;
+
+        Console.WriteLine("Introduceti cele {0} numere:", n);
+
+       
+        for (int i = 0; i < n; i++)
+        {
+            int num = int.Parse(Console.ReadLine());
+            if (num % 2 == 0)
+            {
+                count++; 
+            }
+        }
+
+        
+        Console.WriteLine("Numarul de numere pare este: " + count);
+    }
+}
+
+
+Ex 2
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        
+        Console.Write("Introduceti numarul de elemente (n): ");
+        int n = int.Parse(Console.ReadLine());
+
+        
+        int negativeCount = 0;
+        int zeroCount = 0;
+        int positiveCount = 0;
+
+        Console.WriteLine("Introduceti cele {0} numere:", n);
+
+       
+        for (int i = 0; i < n; i++)
+        {
+            int num = int.Parse(Console.ReadLine());
+
+            if (num < 0)
+            {
+                negativeCount++; 
+            }
+            else if (num == 0)
+            {
+                zeroCount++; 
+            }
+            else
+            {
+                positiveCount++; 
+            }
+        }
+
+        
+        Console.WriteLine("Numere negative: " + negativeCount);
+        Console.WriteLine("Numere zero: " + zeroCount);
+        Console.WriteLine("Numere pozitive: " + positiveCount);
+    }
+}
+Ex 3   
+
+Console.WriteLine(" Introduceti un nr n : ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+long result = produs(n);
+
+
+Console.WriteLine($" Produsul numerelor de la 1 la {n} este {result} ");
+
+int suma;
+
+suma = (n * (n + 1)) / 2;
+Console.WriteLine($" Suma numerelor de la 1 la {n} este {suma} ");
+
+
+
+
+static long produs(int n)
+{ long result = 1;
+    for (int i = 1; i <= n; i++)
+    {
+        result *= i;
+    }
+    return result;
+
+}
+
+
+Ex 4 
+
+
+
+
+
+
+
+
+
+
+
+
