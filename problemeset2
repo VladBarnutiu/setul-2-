@@ -104,6 +104,169 @@ static long produs(int n)
 
 
 Ex 4 
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        
+        Console.Write("Introduceti numarul de elemente (n): ");
+        int n = int.Parse(Console.ReadLine());
+
+        
+        int[] secventa = new int[n];
+        Console.WriteLine("Introduceti cele {0} numere:", n);
+        for (int i = 0; i < n; i++)
+        {
+            secventa[i] = int.Parse(Console.ReadLine());
+        }
+
+       
+        Console.Write("Introduceti numarul a: ");
+        int a = int.Parse(Console.ReadLine());
+
+        
+        int pozitie = -1; 
+        for (int i = 0; i < n; i++)
+        {
+            if (secventa[i] == a)
+            {
+                pozitie = i;
+                break; 
+            }
+        }
+
+        
+        Console.WriteLine("Pozitia numarului {0} este: {1}", a, pozitie);
+    }
+}
+
+Ex 5 .
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        
+        Console.WriteLine("Introduceti dimensiunea secventei:");
+        int n = int.Parse(Console.ReadLine());
+
+        
+        int[] secventa = new int[n];
+        Console.WriteLine("Introduceti elementele secventei:");
+
+        for (int i = 0; i < n; i++)
+        {
+            secventa[i] = int.Parse(Console.ReadLine());
+        }
+
+      
+        int count = 0;
+
+       
+        for (int i = 0; i < n; i++)
+        {
+            if (secventa[i] == i)
+            {
+                count++;
+            }
+        }
+
+       
+        Console.WriteLine("Numărul de elemente care sunt egale cu poziția lor: " + count);
+    }
+}
+
+
+Ex 6.
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        
+        Console.WriteLine("Introduceti dimensiunea secventei:");
+        int n = int.Parse(Console.ReadLine());
+
+        
+        int[] secventa = new int[n];
+        Console.WriteLine("Introduceti elementele secventei:");
+
+        for (int i = 0; i < n; i++)
+        {
+            secventa[i] = int.Parse(Console.ReadLine());
+        }
+
+        
+        bool esteCrescatoare = true;
+
+        for (int i = 1; i < n; i++)
+        {
+            if (secventa[i] < secventa[i - 1])  
+            {
+                esteCrescatoare = false;
+                break;
+            }
+        }
+
+        
+        if (esteCrescatoare)
+        {
+            Console.WriteLine("Secventa este in ordine crescatoare.");
+        }
+        else
+        {
+            Console.WriteLine("Secventa nu este in ordine crescatoare.");
+        }
+    }
+}
+
+
+Ex 7.
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        
+        Console.WriteLine("Introduceti dimensiunea secventei:");
+        int n = int.Parse(Console.ReadLine());
+
+        
+        int[] secventa = new int[n];
+        Console.WriteLine("Introduceti elementele secventei:");
+
+        
+        secventa[0] = int.Parse(Console.ReadLine());
+        int min = secventa[0];
+        int max = secventa[0];
+
+        
+        for (int i = 1; i < n; i++)
+        {
+            secventa[i] = int.Parse(Console.ReadLine());
+
+            
+            if (secventa[i] < min)
+            {
+                min = secventa[i];
+            }
+            if (secventa[i] > max)
+            {
+                max = secventa[i];
+            }
+        }
+
+        
+        Console.WriteLine("Cea mai mica valoare din secventa este: " + min);
+        Console.WriteLine("Cea mai mare valoare din secventa este: " + max);
+    }
+}
+
 
 
 
